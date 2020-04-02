@@ -15,7 +15,7 @@
     <ion-content>
       <ion-header>
         <ion-toolbar color="primary">
-          <ion-tiitle>Budget Planner</ion-tiitle>
+          <ion-title>Budget Planner</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
@@ -23,26 +23,38 @@
           <ion-row>
             <ion-col size-md="6" offset-md="3">
               <ion-card>
-                <ion-card-header>
+                <ion -card-header>
                   <ion-card-title>Expense Sheet</ion-card-title>
-                </ion-card-header>
-                <ion-card-content>
-                  <ion-item>
-                    <ion-label position="floating">Expense: </ion-label>
-                    <ion-input type="text"></ion-input>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label position="floating">Expense Amount: </ion-label>
-                    <ion-input type="number"></ion-input>
-                  </ion-item>
-                  <ion-button fill="solid" color="success">
-                    <ion-icon name="add-outline" slot="start"></ion-icon>Add
-                  </ion-button>
-                  <ion-button fill="solid" color="danger">
-                    <ion-icon name="close-circle-outline" slot="start"></ion-icon> Clear
-                  </ion-button>
-                </ion-card-content>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-item>
+                      <ion-label position="floating">Expense: </ion-label>
+                      <ion-input type="text" id="input-expense"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">Expense Amount: </ion-label>
+                      <ion-input type="number" id="input-amount"></ion-input>
+                    </ion-item>
+                    <div class="ion-margin-vertical ion-text-right">
+                      <ion-button fill="solid" color="success" id="btn-add">
+                        <ion-icon name="add-outline" slot="start"></ion-icon>Add
+                      </ion-button>
+                      <ion-button fill="solid" color="danger" id="btn-clear">
+                        <ion-icon name="close-circle-outline" slot="start"></ion-icon> Clear
+                      </ion-button>
+                    </div>
+                  </ion-card-content>
               </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>Current Total: <span id="total-amount"></span></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-list id="expense-list"></ion-list>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -50,6 +62,10 @@
       </ion-content>
     </ion-content>
   </ion-app>
+
+  <script src="app.js" type="text/javascript">
+
+  </script>
 </body>
 
 </html>
